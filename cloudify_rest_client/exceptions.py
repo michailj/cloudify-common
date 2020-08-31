@@ -248,8 +248,6 @@ class MissingCloudifyLicense(CloudifyClientError):
 ERROR_MAPPING = dict([
     (error.ERROR_CODE, error)
     for error in [
-        DeploymentEnvironmentCreationInProgressError,
-        DeploymentEnvironmentCreationPendingError,
         IllegalExecutionParametersError,
         NoSuchIncludeFieldError,
         MissingRequiredDeploymentInputError,
