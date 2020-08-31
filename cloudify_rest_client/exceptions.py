@@ -31,28 +31,6 @@ class CloudifyClientError(Exception):
         return self._message
 
 
-class DeploymentEnvironmentCreationInProgressError(CloudifyClientError):
-    """
-    Raised when there's attempt to execute a deployment workflow and
-    deployment environment creation workflow execution is still running.
-    In such a case, workflow execution should be retried after a reasonable
-    time or after the execution of deployment environment creation workflow
-    has terminated.
-    """
-    ERROR_CODE = 'deployment_environment_creation_in_progress_error'
-
-
-class DeploymentEnvironmentCreationPendingError(CloudifyClientError):
-    """
-    Raised when there's attempt to execute a deployment workflow and
-    deployment environment creation workflow execution is pending.
-    In such a case, workflow execution should be retried after a reasonable
-    time or after the execution of deployment environment creation workflow
-    has terminated.
-    """
-    ERROR_CODE = 'deployment_environment_creation_pending_error'
-
-
 class IllegalExecutionParametersError(CloudifyClientError):
     """
     Raised when an attempt to execute a workflow with wrong/missing parameters
