@@ -13,11 +13,11 @@ class Filter(dict):
 
     @property
     def value(self):
-        return self.get('value', {})
+        return self.get('value')
 
     @property
     def labels_filter(self):
-        return self.value.get('labels')
+        return self.get('labels_filters')
 
     @property
     def created_at(self):
